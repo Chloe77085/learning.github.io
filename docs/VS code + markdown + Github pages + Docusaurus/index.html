@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">GitHub Pages + Docusaurus | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://learning.github.io/learning.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://learning.github.io/learning.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://learning.github.io/learning.github.io/docs/VS code + markdown + Github pages + Docusaurus"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="GitHub Pages + Docusaurus | My Site"><meta data-rh="true" name="description" content="This document illustrates how to create a project, write markdown files, manage markdown files on GitHub, and use Docusaurus for compilation and preview."><meta data-rh="true" property="og:description" content="This document illustrates how to create a project, write markdown files, manage markdown files on GitHub, and use Docusaurus for compilation and preview."><link data-rh="true" rel="icon" href="/learning.github.io/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://learning.github.io/learning.github.io/docs/VS code + markdown + Github pages + Docusaurus"><link data-rh="true" rel="alternate" href="https://learning.github.io/learning.github.io/docs/VS code + markdown + Github pages + Docusaurus" hreflang="en"><link data-rh="true" rel="alternate" href="https://learning.github.io/learning.github.io/docs/VS code + markdown + Github pages + Docusaurus" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"GitHub Pages + Docusaurus","item":"https://learning.github.io/learning.github.io/docs/VS code + markdown + Github pages + Docusaurus"}]}</script><link rel="alternate" type="application/rss+xml" href="/learning.github.io/blog/rss.xml" title="My Site RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/learning.github.io/blog/atom.xml" title="My Site Atom Feed"><link rel="stylesheet" href="/learning.github.io/assets/css/styles.e4599f8b.css">
-<script src="/learning.github.io/assets/js/runtime~main.7fd4cede.js" defer="defer"></script>
+<script src="/learning.github.io/assets/js/runtime~main.1e01a0cb.js" defer="defer"></script>
 <script src="/learning.github.io/assets/js/main.23ab9cd2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -138,16 +138,16 @@ When the pictures you want to insert is in a higher level of directory, use two 
 <p>In the <em>my-website</em> folder, run the <code>git init</code> command to turn the folder into a manageable git repository.</p>
 </li>
 <li>
-<p>Run <code>git add .</code> to add all files created and the files generated for the project, namely, the entire <em>my-website</em> folder.</p>
-</li>
-<li>
-<p>Run <code>git commit -m &quot;xxx&quot;</code> to commit all the changes. Write a brief description for your changes in the quotation marks instead of <em>xxx</em>.</p>
+<p>Run <code>git remote add origin &lt;URL of the repository you created in the first step&gt;</code> to link your folder with the remote repository.</p>
 </li>
 <li>
 <p>Run <code>git branch -M main</code> to rename the repository branch &quot;master&quot; to a more commonly used name &quot;main&quot;.</p>
 </li>
 <li>
-<p>Run <code>git remote add origin &lt;URL of the repository you created in the first step&gt;</code> to link your folder with the remote repository.</p>
+<p>Run <code>git add .</code> to add all files created and the files generated for the project, namely, the entire <em>my-website</em> folder.</p>
+</li>
+<li>
+<p>Run <code>git commit -m &quot;xxx&quot;</code> to commit all the changes. Write a brief description for your changes in the quotation marks instead of <em>xxx</em>.</p>
 </li>
 <li>
 <p>Run <code>git push -u origin main</code> to push all the files and changes to the remote repository.
@@ -170,7 +170,7 @@ After the above actions, you will see the following files in the repository you 
 <li><code>url: &#x27;https://&lt;your repo name&gt;&#x27;,</code></li>
 <li><code>baseUrl: &#x27;/&lt;your repo name&gt;/&#x27;,</code></li>
 <li><code>organizationName: &#x27;&lt;your GitHub user name&gt;&#x27;, </code></li>
-<li><code>projectName: &#x27;learning.github.io&#x27;, </code></li>
+<li><code>projectName: &#x27;&lt;your repo name&gt;&#x27;, </code></li>
 </ul>
 <p>For example, the repository name is <em>learning.github.io</em> and the GitHub user name is <em>Chloe77085</em>.</p>
 <p><img decoding="async" loading="lazy" src="/learning.github.io/assets/images/docusaurus.config.js example-f562bc80d10a024e236f355b854295ca.jpg" width="593" height="269" class="img_ev3q"></p>
@@ -188,7 +188,7 @@ After the above actions, you will see the following files in the repository you 
 <p><img decoding="async" loading="lazy" src="/learning.github.io/assets/images/deploy success-8500a609ceb3c0bcb967e42634517621.PNG" width="1178" height="129" class="img_ev3q"></p>
 </li>
 <li>
-<p>Run <code>git push -u origin test</code> to push the updated files to the test branch. (<code>test</code> is the name of the branch created other than <code>main</code>)</p>
+<p>Run <code>git add .</code> and <code>git commit -m &quot;xxx&quot;</code> to commit the deploy changes and run <code>git push origin &lt;new branch name&gt;</code> to push the deployment-related files to the new branch.</p>
 </li>
 </ol>
 </li>
@@ -196,6 +196,29 @@ After the above actions, you will see the following files in the repository you 
 <p>Enable GitHub Pages</p>
 <p>Open the repository you created for this project and click <strong>Settings</strong>. In the left-side navigation bar, click <strong>Pages</strong>. Select <strong>Deploy from a branch</strong> from the drop-down list under <strong>Source</strong>, select <strong>main</strong> and <strong>/(root)</strong>, and Click <strong>Save</strong>. Then the <strong>Save</strong> button turns into gray. After several seconds, refresh the page. You can visit your site by clicking <strong>Visit site</strong>.</p>
 <p><img decoding="async" loading="lazy" src="/learning.github.io/assets/images/GitHub Pages-2d2a7f40c6485fc27288ab14a6f5a716.jpg" width="1877" height="906" class="img_ev3q"></p>
+</li>
+<li>
+<p>Update files.</p>
+<ol>
+<li>
+<p>Before updating local files, run <code>git pull origin origin main</code> to update your local files.</p>
+</li>
+<li>
+<p>Update files locally and run <code>git add .</code> to add the updated files.</p>
+</li>
+<li>
+<p>Run <code>npm run build</code> to ensure that the modified files can be built as expected.</p>
+</li>
+<li>
+<p>Run <code>git commit -m &quot;xxx&quot;</code> to commit the changes.</p>
+</li>
+<li>
+<p>Run <code>npm run deploy</code>. The deployment is conducted under the main repository.</p>
+</li>
+<li>
+<p>Browse the updated content online through the address in <strong>Settings</strong> - <strong>Pages</strong>. After confirming that all changes are correctly displayed, run <code>git push origin &lt;new branch name&gt;</code> to push the changes to the branch other than the main branch.</p>
+</li>
+</ol>
 </li>
 </ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/VS code + markdown + Github pages + Docusaurus.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/learning.github.io/docs/template"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">template</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#concepts" class="table-of-contents__link toc-highlight">Concepts</a></li><li><a href="#preparation" class="table-of-contents__link toc-highlight">Preparation</a></li><li><a href="#create-a-docusaurus-project" class="table-of-contents__link toc-highlight">Create a Docusaurus project</a></li><li><a href="#manage-markdown-files-on-github" class="table-of-contents__link toc-highlight">Manage markdown files on GitHub</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/learning.github.io/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/learning.github.io/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
 </body>
