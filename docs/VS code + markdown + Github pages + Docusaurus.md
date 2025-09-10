@@ -97,10 +97,10 @@ After previewing the files you write and confirming that they are displayed as y
        ![](./images/new-repo.jpg)
        :::
    2. In the *my-website* folder, run the `git init` command to turn the folder into a manageable git repository.
-   3. Run `git add .` to add all files created and the files generated for the project, namely, the entire *my-website* folder.
-   4. Run `git commit -m "xxx"` to commit all the changes. Write a brief description for your changes in the quotation marks instead of *xxx*.
-   5. Run `git branch -M main` to rename the repository branch "master" to a more commonly used name "main".
-   6. Run `git remote add origin <URL of the repository you created in the first step>` to link your folder with the remote repository.
+   3. Run `git remote add origin <URL of the repository you created in the first step>` to link your folder with the remote repository.
+   4. Run `git branch -M main` to rename the repository branch "master" to a more commonly used name "main".
+   5. Run `git add .` to add all files created and the files generated for the project, namely, the entire *my-website* folder.
+   6. Run `git commit -m "xxx"` to commit all the changes. Write a brief description for your changes in the quotation marks instead of *xxx*.
    7. Run `git push -u origin main` to push all the files and changes to the remote repository.
       After the above actions, you will see the following files in the repository you created:
       
@@ -122,7 +122,7 @@ After previewing the files you write and confirming that they are displayed as y
      - `url: 'https://<your repo name>',`
      - `baseUrl: '/<your repo name>/',`
      - `organizationName: '<your GitHub user name>', `
-     - `projectName: 'learning.github.io', `
+     - `projectName: '<your repo name>', `
   
      For example, the repository name is *learning.github.io* and the GitHub user name is *Chloe77085*.
      
@@ -140,8 +140,8 @@ After previewing the files you write and confirming that they are displayed as y
    6. Run `npm run deploy` to deploy (push) the generated static files on GitHub Pages. The following output indicates that the deploy action is successful. 
     
        ![](./images/deploy%20success.PNG)
-   
-   7. Run `git push -u origin test` to push the updated files to the test branch. (`test` is the name of the branch created other than `main`)
+
+   7. Run `git add .` and `git commit -m "xxx"` to commit the deploy changes and run `git push origin <new branch name>` to push the deployment-related files to the new branch.
 
 
 3. Enable GitHub Pages
@@ -150,6 +150,19 @@ After previewing the files you write and confirming that they are displayed as y
 
     ![](./images/GitHub%20Pages.jpg)
 
+4. Update files.
+   
+   1. Before updating local files, run `git pull origin origin main` to update your local files.
+
+   2. Update files locally and run `git add .` to add the updated files.
+
+   3. Run `npm run build` to ensure that the modified files can be built as expected.
+   
+   4. Run `git commit -m "xxx"` to commit the changes.
+
+   5. Run `npm run deploy`. The deployment is conducted under the main repository.
+   
+   6. Browse the updated content online through the address in **Settings** - **Pages**. After confirming that all changes are correctly displayed, run `git push origin <new branch name>` to push the changes to the branch other than the main branch.
 
 
    
