@@ -152,7 +152,7 @@ After previewing the files you write and confirming that they are displayed as y
 
 4. Update files.
    
-   1. Before updating local files, run `git pull origin origin main` to update your local files.
+   1. Before updating local files, run `git pull origin main` to update your local files.
 
    2. Update files locally and run `git add .` to add the updated files.
 
